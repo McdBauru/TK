@@ -1,0 +1,403 @@
+/* ===== TABELAS (IDENTIDADE PRESERVADA) ===== */
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    box-shadow: none;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Scrollbar personalizada original */
+.tabela-wrapper::-webkit-scrollbar { height: 8px; }
+.tabela-wrapper::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+.tabela-wrapper::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+.tabela-wrapper::-webkit-scrollbar-thumb:hover { background: #555; }
+
+.tabela-nova {
+    border-collapse: collapse;
+    background: #fff;
+    width: 100%;
+    table-layout: auto; /* Alterado de fixed para auto para melhor ajuste mobile */
+}
+
+.tabela-nova th, .tabela-nova td {
+    min-width: 100px;
+    padding: 10px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #ddd;
+    font-size: 13px !important;
+}
+
+.tabela-nova thead th {
+    font-size: 15px !important;
+}
+
+/* Primeira coluna (NOME) - fixa em todos os tamanhos por requisição do projeto. */
+.tabela-nova td:first-child, .tabela-nova th:first-child {
+    min-width: 120px;
+    max-width: none;
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    box-shadow: none;
+    background: inherit; /* herda cor da linha/loja */
+}
+
+/* Colunas booleanas adequadas */
+.tabela-nova td:nth-child(6), .tabela-nova th:nth-child(6),
+.tabela-nova td:nth-child(7), .tabela-nova th:nth-child(7),
+.tabela-nova td:nth-child(8), .tabela-nova th:nth-child(8),
+.tabela-nova td:nth-child(9), .tabela-nova th:nth-child(9),
+.tabela-nova td:nth-child(10), .tabela-nova th:nth-child(10),
+.tabela-nova td:nth-child(11), .tabela-nova th:nth-child(11),
+.tabela-nova td:nth-child(12), .tabela-nova th:nth-child(12) {
+    min-width: 70px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Tabela Cinza (Estilo Original) */
+.tabela-nova.cinza th {
+    background: #111;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 8px;
+    border: 1.5px solid #fff;
+    text-align: left;
+    font-size: 0.9em;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.tabela-nova.cinza td {
+    background: #fff;
+    color: #111;
+    border: 1px solid #ddd;
+    padding: 10px 8px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+/* Tabela Resumo */
+.tabela-resumo {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border: 1px solid #111;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.tabela-resumo th {
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: 1px solid #fff;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabela-resumo td {
+    background: inherit;
+    color: inherit;
+    border: 1px solid #bbb;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.tabela-resumo td:last-child {
+    text-align: right;
+}
+
+/* Alternancia de cor por linha na tabela-resumo (cor da loja + branco) */
+.tabela-resumo.tabela-bas tbody tr:nth-child(odd) { background-color: #fff; color: #111; }
+.tabela-resumo.tabela-bas tbody tr:nth-child(even) { background-color: #ffbcbc; color: #111; }
+.tabela-resumo.tabela-bsn tbody tr:nth-child(odd) { background-color: #fff; color: #111; }
+.tabela-resumo.tabela-bsn tbody tr:nth-child(even) { background-color: #d6eef9; color: #111; }
+.tabela-resumo.tabela-bau tbody tr:nth-child(odd) { background-color: #fff; color: #111; }
+.tabela-resumo.tabela-bau tbody tr:nth-child(even) { background-color: #ececec; color: #111; }
+.tabela-resumo.tabela-bad tbody tr:nth-child(odd) { background-color: #fff; color: #111; }
+.tabela-resumo.tabela-bad tbody tr:nth-child(even) { background-color: #c8e6c9; color: #111; }
+.tabela-resumo.tabela-bdo tbody tr:nth-child(odd) { background-color: #fff; color: #111; }
+.tabela-resumo.tabela-bdo tbody tr:nth-child(even) { background-color: #ffcc99; color: #222; }
+.tabela-resumo.tabela-bac tbody tr:nth-child(odd) { background-color: #fff; color: #111; }
+.tabela-resumo.tabela-bac tbody tr:nth-child(even) { background-color: #fffabf; color: #000; }
+.tabela-resumo.tabela-lpt tbody tr:nth-child(odd) { background-color: #fff; color: #111; }
+.tabela-resumo.tabela-lpt tbody tr:nth-child(even) { background-color: #ececec; color: #111; }
+
+/* Destaque para linha EM ADMISSÃO */
+.tabela-resumo tbody tr:last-child {
+    font-weight: bold;
+    background-color: #e0e0e0;
+    border-top: 2px solid #111;
+}
+
+/* ===== ESTILOS ESPECÍFICOS POR LOJA (PRESERVADOS) ===== */
+/* BAS - Vermelho */
+.tabela-bas {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bas thead tr { background-color: #b10006; }
+.tabela-bas thead th {
+    border: 1.5px solid #b10006;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bas tbody tr:nth-child(even) { background-color: #ffbcbc; }
+.tabela-bas tbody tr:nth-child(odd) { background-color: #fff; }
+.tabela-bas td {
+    border: 1.5px solid #b10006;
+    color: #111;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+/* BSN - Azul */
+.tabela-bsn {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bsn thead tr { background-color: #176991; }
+.tabela-bsn thead th {
+    border: 1.5px solid #176991;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bsn tbody tr:nth-child(even) { background-color: #fff; }
+.tabela-bsn tbody tr:nth-child(odd) { background-color: #d6eef9; }
+.tabela-bsn td {
+    border: 1.5px solid #176991;
+    color: #111;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+/* BAU - Preto */
+.tabela-bau {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bau thead tr { background-color: #222; }
+.tabela-bau thead th {
+    border: 1.5px solid #222;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bau tbody tr:nth-child(even) { background-color: #ececec; }
+.tabela-bau tbody tr:nth-child(odd) { background-color: #fff; }
+.tabela-bau td {
+    border: 1.5px solid #222;
+    color: #111;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+/* BAD - Verde */
+.tabela-bad {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(56,142,60,0.08);
+}
+.tabela-bad thead tr { background-color: #388e3c; }
+.tabela-bad thead th {
+    border: 1.5px solid #388e3c;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bad tbody tr:nth-child(even) { background-color: #c8e6c9; }
+.tabela-bad tbody tr:nth-child(odd) { background-color: #fff; }
+.tabela-bad td {
+    border: 1.5px solid #388e3c;
+    color: #111;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+/* BDO - Laranja */
+.tabela-bdo {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bdo thead tr { background-color: #ff6600; }
+.tabela-bdo thead th {
+    border: 1.5px solid #ff6600;
+    color: #000;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bdo tbody tr:nth-child(even) { background-color: #ffcc99; }
+.tabela-bdo tbody tr:nth-child(odd) { background-color: #fff; }
+.tabela-bdo td {
+    border: 1.5px solid #ff6600;
+    color: #222;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+/* BAC - Amarelo */
+.tabela-bac {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bac thead tr { background-color: #ffcb05; }
+.tabela-bac thead th {
+    border: 1.5px solid #ffcb05;
+    color: #000;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bac tbody tr:nth-child(even) { background-color: #fffabf; }
+.tabela-bac tbody tr:nth-child(odd) { background-color: #fff; }
+.tabela-bac td {
+    border: 1.5px solid #ffcb05;
+    color: #000;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+/* LPT - Cinza */
+.tabela-lpt {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-lpt thead tr { background-color: #bdbdbd; }
+.tabela-lpt thead th {
+    border: 1.5px solid #bdbdbd;
+    color: #000;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-lpt tbody tr:nth-child(even) { background-color: #ececec; }
+.tabela-lpt tbody tr:nth-child(odd) { background-color: #fff; }
+.tabela-lpt td {
+    border: 1.5px solid #bdbdbd;
+    color: #111;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+

@@ -1,0 +1,102 @@
+/* ===== BLOCOS DE RESUMO ===== */
+
+.blocos-resumo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.bloco-resumo, .bloco-resumo-senac, .bloco-menores {
+    border: 1.5px solid #111;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.bloco-resumo .titulo-bloco, .bloco-resumo-senac .titulo-bloco, .bloco-menores h4 {
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.bloco-resumo .valor-bloco {
+    background: #ededed;
+    color: #111;
+    padding: 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Bloco SENAC */
+.bloco-resumo-senac {
+    border: 1.5px solid #111;
+    border-radius: 4px;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-width: 150px;
+}
+
+.bloco-resumo-senac .titulo-bloco {
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 6px 10px 6px 10px;
+    border-bottom: 1px solid #111;
+    text-align: left;
+}
+
+.senac-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    background: #fff;
+    color: #111;
+    padding: 5px 12px;
+    border-top: 1px solid #111;
+}
+
+.senac-valor {
+    font-weight: bold;
+    font-size: 1em;
+    color: #111;
+}
+
+/* Bloco Menores */
+.bloco-menores {
+    border: 1.5px solid #111;
+    border-radius: 4px;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-width: 150px;
+    background: #fff;
+}
+
+.bloco-menores h4 {
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 6px 10px;
+    margin: 0;
+    border-bottom: 1px solid #111;
+    text-align: left;
+}
+
+/* Store-specific bloco colors */
+.bloco-menores.tabela-bas h4 { background-color: #b10006; }
+.bloco-menores.tabela-bsn h4 { background-color: #176991; }
+.bloco-menores.tabela-bau h4 { background-color: #222; }
+.bloco-menores.tabela-bad h4 { background-color: #388e3c; }
+.bloco-menores.tabela-bdo h4 { background-color: #ff6600; color: #000; }
+.bloco-menores.tabela-bac h4 { background-color: #ffcb05; color: #000; }
+.bloco-menores.tabela-lpt h4 { background-color: #bdbdbd; color: #000; }

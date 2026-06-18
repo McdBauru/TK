@@ -1,0 +1,2207 @@
+/* ===== MEDIA QUERIES PARA DESKTOP (>= 1024px) ===== */
+@media (min-width: 1024px) {
+        .pie-chart-container, .line-chart-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .plotly-graph-div {
+            max-width: 400px !important;
+            margin: 0 auto !important;
+        }
+    .total-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .tabela-container {
+        flex: 2;
+    }
+
+    .blocos-resumo {
+        flex: 1;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pie-and-senac {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
+/* ===== TABLET (768px - 1023px) ===== */
+@media (max-width: 1023px) and (min-width: 769px) {
+    .tabela-nova th, .tabela-nova td {
+        min-width: 90px;
+        padding: 8px 6px;
+        font-size: 0.85em;
+    }
+
+    .total-section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pie-chart-container, .line-chart-container {
+        max-width: 100%;
+        min-height: 250px;
+        padding: 12px;
+    }
+}
+
+/* ===== MOBILE (480px - 767px) ===== */
+@media (max-width: 767px) and (min-width: 481px) {
+    body, html {
+        font-size: 14px;
+    }
+
+    .layout-tabela-blocos {
+        gap: 20px;
+        padding: 0 8px;
+    }
+    .line-chart-container {
+        min-height: 40px;
+        height: 50px;
+        max-width: 90px;
+        margin: 0 auto;
+        padding: 2px;
+    }
+    .pie-and-senac .line-chart-container {
+        min-height: 40px;
+        height: 50px;
+        max-width: 90px;
+        margin: 0 auto;
+        padding: 2px;
+    }
+    .plotly-graph-div {
+        min-height: 40px !important;
+        height: 50px !important;
+        max-width: 90px !important;
+        margin: 0 auto !important;
+    }
+    .pie-chart-container {
+        min-height: 40px;
+        height: 50px;
+        max-width: 90px;
+        margin: 0 auto;
+        padding: 2px;
+    }
+    .tabela-nova th, .tabela-nova td {
+        min-width: 70px;
+        padding: 6px 4px;
+        font-size: 0.8em;
+    }
+    .tabela-nova th {
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tabela-nova th, .tabela-nova td {
+        min-width: 80px;
+        padding: 6px 4px;
+        font-size: 0.8em;
+    }
+
+
+    .total-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .pie-chart-container, .line-chart-container {
+        max-width: 100% !important;
+        min-height: 250px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .tabs-container {
+        padding: 0 8px;
+        gap: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabs-container > .tab-button {
+        padding: 10px 12px;
+        font-size: 0.85em;
+        white-space: nowrap;
+    }
+
+    .chart-container {
+        gap: 0;
+    }
+}
+
+/* ===== MOBILE PEQUENO (360px - 479px) ===== */
+@media (max-width: 480px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+        font-size: 12px;
+        line-height: 1.3;
+        overflow-x: hidden;
+    }
+
+    .main-wrapper {
+        padding: 4px !important;
+        margin: 0 !important;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    #main-title {
+        font-size: 1.1em;
+        margin: 4px 0 8px 0 !important;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Tabs otimizadas para mobile - mais compactas */
+    .tabs-container {
+        padding: 2px 0;
+        gap: 2px;
+        margin-bottom: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .tabs-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tabs-container > .tab-button {
+        padding: 6px 8px;
+        font-size: 0.65em;
+        white-space: nowrap;
+        flex-shrink: 0;
+        border-radius: 3px;
+        min-height: 28px;
+        min-width: 45px;
+        text-align: center;
+    }
+
+    /* Layout vertical forçado - garantir separação */
+    .layout-tabela-blocos {
+        gap: 4px;
+        padding: 0;
+        margin-bottom: 4px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+
+    /* Garantir que gráficos não sobreponham */
+    .chart-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        width: 100% !important;
+        margin: 2px 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        z-index: 1 !important;
+        clear: both !important;
+    }
+
+    .pie-and-senac {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+
+    /* Tabela mais legível para mobile - tamanho intermediário */
+    .tabela-wrapper {
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: none;
+        margin-bottom: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabela-nova {
+        font-size: 0.8em;
+        line-height: 1.2;
+        table-layout: auto;
+    }
+
+    .tabela-nova th, .tabela-nova td {
+        min-width: 60px;
+        max-width: 80px;
+        padding: 4px 6px;
+        border: 0.5px solid #ddd;
+        word-wrap: break-word;
+        white-space: normal;
+        font-size: 0.8em;
+    }
+
+    .tabela-nova.cinza th {
+        padding: 6px 6px;
+        font-size: 0.85em;
+        line-height: 1.1;
+        font-weight: bold;
+    }
+
+    .tabela-nova.cinza td {
+        padding: 4px 6px;
+        font-size: 0.8em;
+    }
+
+
+    /* Colunas booleanas adequadas */
+    .tabela-nova td:nth-child(6), .tabela-nova th:nth-child(6),
+    .tabela-nova td:nth-child(7), .tabela-nova th:nth-child(7),
+    .tabela-nova td:nth-child(8), .tabela-nova th:nth-child(8),
+    .tabela-nova td:nth-child(9), .tabela-nova th:nth-child(9),
+    .tabela-nova td:nth-child(10), .tabela-nova th:nth-child(10),
+    .tabela-nova td:nth-child(11), .tabela-nova th:nth-child(11),
+    .tabela-nova td:nth-child(12), .tabela-nova th:nth-child(12) {
+        min-width: 40px;
+        max-width: 50px;
+        text-align: center;
+        padding: 4px 2px;
+        font-size: 0.9em;
+    }
+
+    /* Seção total em coluna única */
+    .total-section {
+        grid-template-columns: 1fr !important;
+        gap: 6px;
+        margin: 6px 0;
+    }
+
+    /* GRÁFICOS MAIS LEGÍVEIS EM MOBILE */
+    .chart-container {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .pie-chart-container, .line-chart-container {
+        max-width: 100% !important;
+        min-height: 250px !important;
+        padding: 8px !important;
+        margin: 6px 0 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Tabela de resumo mobile */
+    .tabela-resumo {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        border-radius: 3px;
+        overflow: hidden;
+        font-size: 0.7em;
+    }
+
+    .tabela-resumo th {
+        padding: 4px 3px;
+        font-size: 0.7em;
+    }
+
+    .tabela-resumo td {
+        padding: 3px 3px;
+        font-size: 0.7em;
+    }
+
+    /* Blocos mobile */
+    .bloco-menores {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 4px 0 !important;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    .bloco-menores h4 {
+        font-size: 0.75em;
+        padding: 4px 6px;
+        margin: 0;
+    }
+
+    .blocos-resumo {
+        flex-direction: column;
+        gap: 4px;
+        min-width: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .bloco-resumo {
+        width: 100%;
+        min-width: unset;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .bloco-resumo .titulo-bloco {
+        font-size: 0.75em;
+        padding: 4px 6px;
+    }
+
+    .bloco-resumo .valor-bloco {
+        font-size: 1.1em;
+        padding: 6px 4px;
+    }
+
+    /* Títulos mobile */
+    .chart-title {
+        font-size: 0.8em;
+        margin: 6px 0 4px 0;
+        padding: 2px 0;
+        text-align: center;
+    }
+
+    /* Erro messages mobile */
+    .erro {
+        padding: 6px;
+        font-size: 0.75em;
+        border-radius: 3px;
+    }
+
+    /* Tab content mobile */
+    .tab-content {
+        padding: 2px !important;
+    }
+
+    .conteudos {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* ===== EXTRA SMALL PHONES (320px - 359px) ===== */
+@media (max-width: 360px) {
+    html, body {
+        font-size: 12px;
+    }
+
+    .main-wrapper {
+        padding: 4px !important;
+    }
+
+    #main-title {
+        font-size: 1.1em;
+        margin: 4px 0 8px 0;
+    }
+
+    .tabela-nova th, .tabela-nova td {
+        min-width: 50px;
+        padding: 3px 4px;
+        font-size: 0.75em;
+    }
+
+    .tabs-container > .tab-button {
+        padding: 6px 8px;
+        font-size: 0.7em;
+        min-height: 28px;
+    }
+
+    .pie-chart-container, .line-chart-container {
+        min-height: 200px !important;
+        padding: 6px !important;
+    }
+}
+
+/* ===== LANDSCAPE MODE (height-based) ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-wrapper {
+        padding: 4px;
+    }
+
+    #main-title {
+        font-size: 1em;
+        margin: 4px 0;
+    }
+
+    .layout-tabela-blocos {
+        gap: 8px;
+    }
+
+    .pie-chart-container, .line-chart-container {
+        min-height: 150px !important;
+    }
+
+    .tabs-container {
+        gap: 4px;
+    }
+}
+
+/* ===== PORTRAIT MODE FIX (standard mobile) ===== */
+@media (max-width: 600px) and (orientation: portrait) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .tabela-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* ===== Mobile-specific breakpoints (480px and 360px) =====
+   Reduce column widths, chart sizes and shadows for small screens. */
+@media (max-width: 480px) {
+    .pie-chart-container, .line-chart-container {
+        min-height: 180px !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .tabela-nova th,
+    .tabela-nova td {
+        min-width: 70px;
+        padding: 6px 6px;
+        font-size: 0.78em;
+    }
+
+
+    .tabela-wrapper {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+@media (max-width: 360px) {
+    .pie-chart-container, .line-chart-container {
+        min-height: 150px !important;
+        padding: 8px;
+        box-shadow: none;
+    }
+
+    .tabela-nova th,
+    .tabela-nova td {
+        min-width: 60px;
+        padding: 4px 4px;
+        font-size: 0.72em;
+    }
+
+
+    .tabs-container .tab-button {
+        padding: 6px 8px;
+        font-size: 0.8em;
+    }
+}
+
+/* Largura mínima para cada coluna da tabela nova (18 colunas) */
+.tabela-nova th,
+.tabela-nova td {
+    min-width: 100px;
+    padding: 10px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Colunas mais estreitas para columnas de dados numéricos */
+.tabela-nova td:last-child,
+.tabela-nova th:last-child {
+    min-width: 80px;
+}
+
+
+/* Colunas booleanas (RG-Doc.Dependente: índices 5-11) */
+.tabela-nova td:nth-child(6),
+.tabela-nova th:nth-child(6),
+.tabela-nova td:nth-child(7),
+.tabela-nova th:nth-child(7),
+.tabela-nova td:nth-child(8),
+.tabela-nova th:nth-child(8),
+.tabela-nova td:nth-child(9),
+.tabela-nova th:nth-child(9),
+.tabela-nova td:nth-child(10),
+.tabela-nova th:nth-child(10),
+.tabela-nova td:nth-child(11),
+.tabela-nova th:nth-child(11),
+.tabela-nova td:nth-child(12),
+.tabela-nova th:nth-child(12) {
+    min-width: 70px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Tabela de cargos - más opciones para muitas colunas */
+.tabela-nova {
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: none; /* Remover sombra */
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Garantir que as células do corpo da tabela sejam transparentes
+   para que as cores alternadas das linhas (por loja) apareçam. */
+.tabela-nova tbody td {
+    background: transparent;
+}
+
+.tabela-nova.cinza {
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: none; /* Remover sombra */
+}
+
+.tabela-nova.cinza th {
+    background: #111;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 8px;
+    border: 1.5px solid #fff;
+    text-align: left;
+    font-size: 0.9em;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.tabela-nova.cinza td {
+    background: #fff;
+    color: #111;
+    border: 1px solid #ddd;
+    padding: 10px 8px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+/* Tabela de resumo */
+.tabela-resumo {
+    width: auto;
+    max-width: 400px;
+    margin-left: 0;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #111;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tabela-resumo th {
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: 1px solid #fff;
+    text-align: left;
+}
+
+.tabela-resumo td {
+    background: #fff;
+    color: #111;
+    border: 1px solid #bbb;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.tabela-resumo td:last-child {
+    text-align: right;
+}
+
+/* Destaque para linha TOTAL */
+.linha-total {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-top: 1px solid #111;
+}
+
+/* Destaque para linha EM ADMISSÃO */
+.tabela-resumo tbody tr:last-child {
+    font-weight: bold;
+    background-color: #e0e0e0;
+    border-top: 2px solid #111;
+}
+
+/* Seção total organizada em grid */
+.total-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: start;
+}
+
+/* Container do grafico de pizza e linhas */
+.pie-chart-container,
+.line-chart-container {
+    flex-shrink: 0;
+    border: 2px solid #333; /* Borda escura para combinar com o fundo */
+    border-radius: 12px; /* Cantos arredondados para um look moderno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra mais intensa para flutuar */
+    background: transparent; /* Fundo transparente para integrar com o gradiente */
+    padding: 16px; /* Espaçamento interno para "respirar" */
+    margin: 8px 0; /* Margem externa para separação */
+    transition: box-shadow 0.3s ease; /* Transição suave para hover */
+    max-width: 400px; /* Largura máxima para consistência */
+    min-height: 300px; /* Altura mínima para evitar compressão */
+    display: flex;
+    justify-content: center; /* Centralizar o gráfico horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+}
+
+/* Efeito hover para interatividade */
+.pie-chart-container:hover,
+.line-chart-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7); /* Sombra mais intensa no hover */
+    border-color: #555; /* Borda ligeiramente mais clara no hover */
+}
+
+/* Responsividade: ajustar em telas menores */
+@media (max-width: 768px) {
+    .pie-chart-container,
+    .line-chart-container {
+        max-width: 100%; /* Ocupar toda a largura disponível */
+        padding: 12px; /* Reduzir padding em mobile */
+        min-height: 250px; /* Altura ajustada */
+    }
+    .pie-and-senac {
+        flex-direction: column; /* Empilhar verticalmente em telas pequenas */
+        gap: 16px;
+    }
+}
+
+/* Blocos de resumo à direita */
+.blocos-resumo {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 200px;
+    max-width: 320px;
+}
+.bloco-resumo {
+    border: 1.5px solid #111;
+    margin-bottom: 0;
+    border-radius: 4px;
+    background: transparent;
+    overflow: hidden;
+    min-width: 150px;
+}
+.bloco-resumo .titulo-bloco {
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    padding: 7px 10px 4px 10px;
+}
+.bloco-resumo .valor-bloco {
+    background: #ededed;
+    color: #111;
+    padding: 9px 10px 5px 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Bloco SENAC */
+.bloco-resumo-senac {
+    border: 1.5px solid #111;
+    border-radius: 4px;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-width: 150px;
+}
+.bloco-resumo-senac .titulo-bloco {
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 6px 10px 6px 10px;
+    border-bottom: 1px solid #111;
+    text-align: left;
+}
+.senac-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    background: #fff;
+    color: #111;
+    padding: 5px 12px;
+    border-top: 1px solid #111;
+}
+.senac-valor {
+    font-weight: bold;
+    font-size: 1em;
+    color: #111;
+}
+
+/* Bloco Menores */
+.bloco-menores {
+    border: 1.5px solid #111;
+    border-radius: 4px;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-width: 150px;
+    background: #fff;
+}
+.bloco-menores h4 {
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 6px 10px;
+    margin: 0;
+    border-bottom: 1px solid #111;
+    text-align: left;
+}
+
+/* Cores específicas para bloco de menores por loja */
+.bloco-menores.tabela-bas h4 { background-color: #b10006; }
+.bloco-menores.tabela-bsn h4 { background-color: #176991; }
+.bloco-menores.tabela-bau h4 { background-color: #222; }
+.bloco-menores.tabela-bad h4 { background-color: #388e3c; }
+.bloco-menores.tabela-bdo h4 { background-color: #ff6600; color: #000; }
+.bloco-menores.tabela-bac h4 { background-color: #ffcb05; color: #000; }
+.bloco-menores.tabela-lpt h4 { background-color: #bdbdbd; color: #000; }
+
+/* Container para pizza e SENAC lado a lado */
+.pie-and-senac {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Posicionamento no grid */
+.tabela-container {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.bloco-menores {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+}
+
+.pie-and-senac {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+}
+
+/* Media Queries para responsividade com tabelas de 18 colunas */
+
+/* ===== TABLET & SMALL LAPTOP (1200px down) ===== */
+@media (max-width: 1200px) {
+    .tabela-nova th,
+    .tabela-nova td {
+        min-width: 90px;
+        padding: 8px 6px;
+        font-size: 0.85em;
+    }
+    
+    
+    .total-section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .tabela-container,
+    .bloco-menores,
+    .pie-and-senac {
+        grid-column: 1;
+    }
+
+    /* For small screens ensure charts stack after tables to avoid overlap */
+    .tabela-container { grid-row: 1; }
+    .pie-and-senac  { grid-row: 2; }
+    .bloco-menores  { grid-row: 3; }
+}
+
+/* For very small screens (mobile) force charts below tables and simplify visuals */
+@media (max-width: 800px) {
+    .total-section {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto;
+    }
+
+    .tabela-container { grid-row: 1 !important; }
+    .pie-and-senac  { grid-row: 2 !important; }
+    .bloco-menores  { grid-row: 3 !important; }
+
+    /* Make charts visually lighter to avoid covering content */
+    .pie-chart-container, .line-chart-container {
+        box-shadow: none !important;
+        border-width: 1px !important;
+        min-height: 180px !important;
+    }
+
+    /* Mobile: force charts to stack vertically under tables and reduce sizes */
+    .pie-and-senac { 
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+    .pie-chart-container, .line-chart-container {
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 180px !important;
+        padding: 10px !important;
+        margin: 0 0 16px 0 !important;
+        border-width: 1px !important;
+        box-shadow: none !important;
+        border-color: #999 !important;
+    }
+
+    /* Force Plotly graphs to be responsive and smaller */
+    .layout-tabela-blocos .plotly-graph-div {
+        width: 100% !important;
+        height: 220px !important;
+        max-height: 220px !important;
+        overflow: visible !important;
+    }
+    
+    /* Otimizar Plotly para máxima responsividade em mobile */
+    .pie-chart-container svg, 
+    .line-chart-container svg {
+        max-width: 100%;
+        height: auto !important;
+    }
+    
+    /* Melhorar espaço de gráficos em mobile */
+    .pie-and-senac {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .pie-chart-container, 
+    .line-chart-container {
+        width: 100% !important;
+        max-width: none;
+        min-height: 250px;
+    }
+
+    /* Reduce table font/padding for admission tables */
+    .layout-tabela-blocos .tabela-nova th,
+    .layout-tabela-blocos .tabela-nova td {
+        font-size: 0.78em !important;
+        padding: 6px 6px !important;
+        min-width: 60px !important;
+    }
+}
+
+/* ===== TABLET VERTICAL / SMALL SCREENS (768px down) ===== */
+@media (max-width: 768px) {
+    body, html {
+        font-size: 14px;
+    }
+    
+    .layout-tabela-blocos {
+        gap: 20px;
+        padding: 0 8px;
+    }
+    
+    .tabela-nova th,
+    .tabela-nova td {
+        min-width: 80px;
+        padding: 6px 4px;
+        font-size: 0.8em;
+    }
+    
+    
+    .total-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .pie-chart-container,
+    .line-chart-container {
+        max-width: 100% !important;
+        min-height: 250px;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .pie-and-senac {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .tabs-container {
+        padding: 0 8px;
+        gap: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tabs-container > .tab-button {
+        padding: 10px 12px;
+        font-size: 0.85em;
+        white-space: nowrap;
+    }
+    
+    .chart-container {
+        gap: 0;
+    }
+}
+
+/* ===== MOBILE PHONES (480px down) ===== */
+@media (max-width: 480px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+        font-size: 12px;
+        line-height: 1.3;
+        overflow-x: hidden;
+    }
+
+    .main-wrapper {
+        padding: 4px !important;
+        margin: 0 !important;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    #main-title {
+        font-size: 1.1em;
+        margin: 4px 0 8px 0 !important;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Tabs otimizadas para mobile - mais compactas */
+    .tabs-container {
+        padding: 2px 0;
+        gap: 2px;
+        margin-bottom: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .tabs-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tabs-container > .tab-button {
+        padding: 6px 8px;
+        font-size: 0.65em;
+        white-space: nowrap;
+        flex-shrink: 0;
+        border-radius: 3px;
+        min-height: 28px;
+        min-width: 45px;
+        text-align: center;
+    }
+
+    /* Layout vertical forçado - garantir separação */
+    .layout-tabela-blocos {
+        gap: 4px; /* Gap menor */
+        padding: 0;
+        margin-bottom: 4px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important; /* Esticar elementos */
+        width: 100% !important;
+        overflow: visible !important; /* Garantir que nada seja cortado */
+    }
+
+    /* Garantir que gráficos não sobreponham */
+    .chart-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        width: 100% !important;
+        margin: 2px 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        z-index: 1 !important; /* Z-index baixo */
+        clear: both !important; /* Forçar quebra de linha */
+    }
+
+    .pie-and-senac {
+        display: flex !important;
+        flex-direction: column !important; /* Empilhar gráficos verticalmente */
+        gap: 4px !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+
+    /* Tabela mais legível para mobile - tamanho intermediário */
+    .tabela-wrapper {
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: none; /* Remover sombra da tabela */
+        margin-bottom: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabela-nova {
+        font-size: 0.8em; /* Aumentar para melhor legibilidade */
+        line-height: 1.2;
+        table-layout: auto;
+    }
+
+    .tabela-nova th,
+    .tabela-nova td {
+        min-width: 60px; /* Aumentar largura mínima */
+        max-width: 80px; /* Ajustar largura máxima */
+        padding: 4px 6px; /* Padding maior para conforto */
+        border: 0.5px solid #ddd;
+        word-wrap: break-word;
+        white-space: normal;
+        font-size: 0.8em;
+    }
+
+    .tabela-nova.cinza th {
+        padding: 6px 6px;
+        font-size: 0.85em;
+        line-height: 1.1;
+        font-weight: bold;
+    }
+
+    .tabela-nova.cinza td {
+        padding: 4px 6px;
+        font-size: 0.8em;
+    }
+
+
+    /* Colunas booleanas adequadas */
+    .tabela-nova td:nth-child(6),
+    .tabela-nova th:nth-child(6),
+    .tabela-nova td:nth-child(7),
+    .tabela-nova th:nth-child(7),
+    .tabela-nova td:nth-child(8),
+    .tabela-nova th:nth-child(8),
+    .tabela-nova td:nth-child(9),
+    .tabela-nova th:nth-child(9),
+    .tabela-nova td:nth-child(10),
+    .tabela-nova th:nth-child(10),
+    .tabela-nova td:nth-child(11),
+    .tabela-nova th:nth-child(11),
+    .tabela-nova td:nth-child(12),
+    .tabela-nova th:nth-child(12) {
+        min-width: 40px; /* Maior para booleanos */
+        max-width: 50px;
+        text-align: center;
+        padding: 4px 2px;
+        font-size: 0.9em;
+    }
+
+    /* Seção total em coluna única */
+    .total-section {
+        grid-template-columns: 1fr !important;
+        gap: 6px;
+        margin: 6px 0;
+    }
+
+    /* GRÁFICOS MAIS LEGÍVEIS EM MOBILE */
+    .chart-container {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .pie-chart-container,
+    .line-chart-container {
+        max-width: 100% !important;
+        min-height: 250px !important; /* Maior para legibilidade */
+        padding: 8px !important;
+        margin: 6px 0 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Botão para mostrar/ocultar gráficos - opcional */
+    .toggle-charts-btn {
+        display: none !important; /* Esconder botão já que gráficos ficam visíveis */
+    }
+    .line-chart-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 200px !important; /* Maior */
+        max-height: 250px !important;
+        height: 200px !important;
+        padding: 8px !important;
+        margin: 6px 0 !important;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .pie-and-senac {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    /* Tabela de resumo mobile */
+    .tabela-resumo {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        border-radius: 3px;
+        overflow: hidden;
+        font-size: 0.7em;
+    }
+
+    .tabela-resumo th {
+        padding: 4px 3px;
+        font-size: 0.7em;
+    }
+
+    .tabela-resumo td {
+        padding: 3px 3px;
+        font-size: 0.7em;
+    }
+
+    /* Blocos mobile */
+    .bloco-menores {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 4px 0 !important;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    .bloco-menores h4 {
+        font-size: 0.75em;
+        padding: 4px 6px;
+        margin: 0;
+    }
+
+    .blocos-resumo {
+        flex-direction: column;
+        gap: 4px;
+        min-width: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .bloco-resumo {
+        width: 100%;
+        min-width: unset;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .bloco-resumo .titulo-bloco {
+        font-size: 0.75em;
+        padding: 4px 6px;
+    }
+
+    .bloco-resumo .valor-bloco {
+        font-size: 1.1em;
+        padding: 6px 4px;
+    }
+
+    /* Títulos mobile */
+    .chart-title {
+        font-size: 0.8em;
+        margin: 6px 0 4px 0;
+        padding: 2px 0;
+        text-align: center;
+    }
+
+    /* Erro messages mobile */
+    .erro {
+        padding: 6px;
+        font-size: 0.75em;
+        border-radius: 3px;
+    }
+
+    /* Tab content mobile */
+    .tab-content {
+        padding: 2px !important;
+    }
+
+    .conteudos {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* ===== EXTRA SMALL PHONES (320px / old devices) ===== */
+@media (max-width: 360px) {
+    html, body {
+        font-size: 12px;
+    }
+    
+    .main-wrapper {
+        padding: 4px !important;
+    }
+    
+    #main-title {
+        font-size: 1.1em;
+        margin: 4px 0 8px 0;
+    }
+    
+    .tabela-nova th,
+    .tabela-nova td {
+        min-width: 50px; /* Ajustado para telas muito pequenas */
+        padding: 3px 4px;
+        font-size: 0.75em;
+    }
+    
+    .tabs-container > .tab-button {
+        padding: 6px 8px;
+        font-size: 0.7em;
+        min-height: 28px;
+    }
+    
+    .pie-chart-container,
+    .line-chart-container {
+        min-height: 200px !important; /* Ainda legível em telas pequenas */
+        padding: 6px !important;
+    }
+}
+
+/* ===== LANDSCAPE MODE (height-based) ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-wrapper {
+        padding: 4px;
+    }
+    
+    #main-title {
+        font-size: 1em;
+        margin: 4px 0;
+    }
+    
+    .layout-tabela-blocos {
+        gap: 8px;
+    }
+    
+    .pie-chart-container,
+    .line-chart-container {
+        min-height: 150px !important;
+    }
+    
+    .tabs-container {
+        gap: 4px;
+    }
+}
+
+/* ===== PORTRAIT MODE FIX (standard mobile) ===== */
+@media (max-width: 600px) and (orientation: portrait) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .tabela-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+@import url('resumo-funcionarios.css');
+@media (min-width: 801px) {
+    body, html {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%) !important;
+        color: #fff;
+    }
+    .main-wrapper, #tab-contents, main {
+        background: transparent !important;
+    }
+    .tabs-container {
+        display: flex;
+        gap: 12px;
+        padding: 0 16px;
+        margin-bottom: 16px;
+        justify-content: flex-start; /* Alinhar à esquerda para iniciar com BAS */
+        align-items: center;
+        background: transparent;
+        border-radius: 12px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #00d4ff #23234a;
+        scroll-padding-left: 16px;
+        scroll-padding-right: 16px;
+        scroll-behavior: smooth;
+        flex-wrap: nowrap; /* Garantir que não quebre linha */
+    }
+    }
+    .tabs-container > .tab-button {
+        padding: 18px 32px;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: #23234a;
+        color: #00d4ff;
+        margin: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .tabs-container > .tab-button.active {
+        background: #00d4ff;
+        color: #23234a;
+        box-shadow: 0 0 24px #00d4ff;
+        border: 2px solid #fff;
+    }
+    .tab-button:hover {
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 8px 24px rgba(0,212,255,0.18);
+        background: #2a2a3e;
+        color: #fff;
+    }
+    .tab-button.active {
+        box-shadow: 0 0 24px #00d4ff;
+        background: #00d4ff;
+        color: #23234a;
+    }
+    .tabela-loja {
+        border-collapse: collapse;
+        margin: 1rem 0;
+        background: #181828;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    .tabela-loja th, .tabela-loja td {
+        border: 1px solid #fff;
+        padding: 0.6em 1em;
+        text-align: left;
+        font-size: 1em;
+    }
+    .tabela-loja th {
+        background: #23234a;
+        color: #00d4ff;
+        font-weight: bold;
+    }
+    .tabela-loja tr:nth-child(even) {
+        background: #23234a;
+    }
+    .tabela-loja tr:nth-child(odd) {
+        background: #181828;
+    }
+    .tabela-loja td {
+        color: #fff;
+    }
+    .tabela-loja tr:hover {
+        background: #2a2a3e;
+    }
+}
+/* --- SNIPPET DE RESPONSIVIDADE SUGERIDO --- */
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .tabela-nova th,
+    .tabela-nova td {
+        font-size: 12px;
+        padding: 4px 6px;
+        max-width: 120px;
+        white-space: normal;
+    }
+    .main-wrapper, #tab-contents {
+        max-width: 100vw;
+        overflow-x: auto;
+    }
+}
+/* Estilo para a tabela da aba LPT (tabela-lpt) */
+.tabela-lpt {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-lpt thead tr {
+    background-color: #bdbdbd; /* Cabeçalho cinza */
+}
+.tabela-lpt thead th {
+    border: 1.5px solid #bdbdbd;
+    color: #000; /* Texto preto no cabeçalho */
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-lpt tbody tr:nth-child(even) {
+    background-color: #ececec; /* Cinza claro nas linhas pares */
+        overflow-x: hidden;
+}
+.tabela-lpt tbody tr:nth-child(odd) {
+    background-color: #fff; /* Linhas ímpares brancas */
+}
+.tabela-lpt td {
+    border: 1.5px solid #bdbdbd; /* Bordas cinza */
+    color: #111; /* Texto escuro no corpo */
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+/* Estilo para a tabela da aba BDO (tabela-bdo) */
+.tabela-bdo {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bdo thead tr {
+    background-color: #ff6600; /* Laranja mais vibrante para cabeçalho */
+}
+.tabela-bdo thead th {
+    border: 1.5px solid #ff6600;
+    color: #000; /* Texto preto no cabeçalho */
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+            max-width: 100vw;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bdo tbody tr:nth-child(even) {
+    background-color: #ffcc99; /* Laranja claro mais vibrante para linhas pares */
+}
+.tabela-bdo tbody tr:nth-child(odd) {
+    background-color: #fff; /* Linhas ímpares brancas */
+}
+.tabela-bdo td {
+    border: 1.5px solid #ff6600; /* Bordas laranja vibrante */
+    color: #222; /* Texto escuro no corpo */
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+/* Estilo para a tabela da aba BAS (tabela-bas) */
+.tabela-bas {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bas thead tr {
+    background-color: #b10006; /* Cabeçalho vermelho forte */
+}
+.tabela-bas thead th {
+    border: 1.5px solid #b10006;
+    color: #fff; /* Texto branco no cabeçalho */
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bas tbody tr:nth-child(even) {
+    background-color: #ffbcbc; /* Vermelho claro nas linhas pares */
+}
+.tabela-bas tbody tr:nth-child(odd) {
+    background-color: #fff; /* Linhas ímpares brancas */
+}
+.tabela-bas td {
+    border: 1.5px solid #b10006; /* Bordas vermelhas */
+    color: #111; /* Texto escuro no corpo */
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+/* Estilo para a tabela da aba BAC (tabela-bac) */
+.tabela-bac {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bac thead tr {
+    background-color: #ffcb05; /* Cabeçalho amarelo */
+}
+.tabela-bac thead th {
+    border: 1.5px solid #ffcb05; /* Bordas do cabeçalho amarelas */
+    color: #000; /* Texto preto no cabeçalho */
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bac tbody tr:nth-child(even) {
+    background-color: #fffabf; /* Amarelo claro nas linhas pares */
+}
+.tabela-bac tbody tr:nth-child(odd) {
+    background-color: #fff; /* Linhas ímpares brancas */
+}
+.tabela-bac td {
+    border: 1.5px solid #ffcb05; /* Bordas amarelas */
+    color: #000; /* Texto preto no corpo */
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+/* --- PADRÃO DE CLASSES PARA TABELAS DE ABAS --- */
+.tabela-bau {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bau thead tr {
+    background-color: #222; /* Cabeçalho preto */
+}
+.tabela-bau thead th {
+    border: 1.5px solid #222;
+    color: #fff; /* Texto branco no cabeçalho */
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bau tbody tr:nth-child(even) {
+    background-color: #ececec; /* Cinza claro nas linhas pares */
+}
+.tabela-bau tbody tr:nth-child(odd) {
+    background-color: #fff; /* Linhas ímpares brancas */
+}
+.tabela-bau td {
+    border: 1.5px solid #222; /* Bordas pretas */
+    color: #111; /* Texto escuro no corpo */
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+.tabela-bad {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(56,142,60,0.08);
+}
+.tabela-bad thead tr {
+    background-color: #388e3c; /* Cabeçalho verde */
+}
+.tabela-bad thead th {
+    border: 1.5px solid #388e3c;
+    color: #fff; /* Texto branco no cabeçalho */
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bad tbody tr:nth-child(even) {
+    background-color: #c8e6c9; /* Verde claro nas linhas pares */
+}
+.tabela-bad tbody tr:nth-child(odd) {
+    background-color: #fff; /* Linhas ímpares brancas */
+}
+.tabela-bad td {
+    border: 1.5px solid #388e3c; /* Bordas verdes */
+    color: #111; /* Texto escuro no corpo */
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+
+.tabela-bsn {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Aptos Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tabela-bsn thead tr {
+    background-color: #176991; /* Cabeçalho azul */
+}
+.tabela-bsn thead th {
+    border: 1.5px solid #176991;
+    color: #fff; /* Texto branco no cabeçalho */
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-bsn tbody tr:nth-child(even) {
+    background-color: #d6eef9; /* Azul claro nas linhas pares */
+}
+.tabela-bsn tbody tr:nth-child(odd) {
+    background-color: #fff; /* Linhas ímpares brancas */
+}
+.tabela-bsn td {
+    border: 1.5px solid #176991; /* Bordas azuis */
+    color: #111; /* Texto escuro no corpo */
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+    max-width: 220px;
+}
+.tabela-base-azul td {
+    color: #222;
+}
+/* Estilo para a tabela da aba BSN (tabela-base-azul) */
+.tabela-base-azul thead tr {
+    background-color: #176991;   /* Azul escuro do cabeçalho */
+}
+.tabela-base-azul thead th {
+    border: 1.5px solid #176991; /* Borda azul escuro */
+}
+.tabela-base-azul td {
+    border: 1.5px solid #176991; /* Borda azul escuro */
+}
+.tabela-base-azul tbody tr:nth-child(even) {
+    background-color: #d6eef9;   /* Azul claro linhas pares */
+}
+.tabela-base-azul tbody tr:nth-child(odd) {
+    background-color: #fff;      /* Linhas ímpares brancas */
+}
+/* Wrapper para responsividade horizontal das tabelas */
+.tabela-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+}
+
+@media (max-width: 800px) {
+    .tabela-wrapper {
+        cursor: grab;
+    }
+    .tabela-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(to left, rgba(26,26,46,0.85) 60%, rgba(26,26,46,0));
+        z-index: 2;
+        border-radius: 0 12px 12px 0;
+        display: block;
+    }
+}
+
+/* Ajuste para todas as tabelas base e variantes */
+.tabela-base, .tabela-loja, .tabela-loja-preta, .tabela-loja-verde, .tabela-bad, .tabela-bau,
+.tabela-bac, .tabela-bas, .tabela-bdo, .tabela-lpt, .tabela-bsn, .tabela-base-azul {
+        table-layout: auto;
+        width: 100%;
+}
+
+@media (max-width: 800px) {
+    .tabela-base, .tabela-loja, .tabela-loja-preta, .tabela-loja-verde, .tabela-bad, .tabela-bau,
+    .tabela-bac, .tabela-bas, .tabela-bdo, .tabela-lpt, .tabela-bsn, .tabela-base-azul {
+        min-width: max-content;
+        width: auto;
+    }
+}
+.tabela-base th, .tabela-base td,
+.tabela-loja th, .tabela-loja td,
+.tabela-loja-preta th, .tabela-loja-preta td,
+.tabela-loja-verde th, .tabela-loja-verde td,
+.tabela-bad th, .tabela-bad td,
+.tabela-bau th, .tabela-bau td {
+    white-space: pre-line;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 220px;
+}
+/* BASE DE ESTILIZAÇÃO PARA TODAS AS TABELAS */
+
+/* Ajuste mobile: apenas fonte menor e max-width menor, sem nowrap */
+@media (max-width: 800px) {
+.tabs-container {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    gap: 4px;
+    padding: 0 2vw;
+    justify-content: flex-start; /* Alinhar à esquerda */
+    flex-wrap: nowrap; /* Garantir que não quebre linha */
+    overflow-x: auto; /* Permitir scroll horizontal */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #00d4ff #23234a;
+    scroll-behavior: smooth;
+    /* Máscara opcional para fade nas bordas */
+    mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+.tabs-container > .tab-button {
+    padding: 6px 8px;
+    font-size: 0.8em;
+    flex-shrink: 1; /* Permitir encolher um pouco para ajustar */
+    min-width: 50px; /* Reduzir min-width para permitir mais ajuste */
+    white-space: nowrap; /* Nunca quebrar texto */
+}
+.tabela-base thead tr {
+    background-color: #222; /* Troque para a cor desejada */
+}
+.tabela-base thead th {
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1.5px solid #222; /* Troque para a cor desejada */
+    white-space: normal;
+    font-size: 16px;
+    word-break: break-word;
+}
+.tabela-base tbody tr:nth-child(even) {
+    background-color: #ececec; /* Troque para a cor desejada */
+}
+.tabela-base tbody tr:nth-child(odd) {
+    background-color: #fff; /* Troque para a cor desejada */
+}
+.tabela-base td {
+    color: #222;
+    padding: 8px 10px;
+    border: 1.5px solid #222; /* Troque para a cor desejada */
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+}
+/* Estilo aprimorado para a tabela da aba BAD (tabela-loja-verde) */
+.tabela-loja-verde {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(56,142,60,0.08);
+}
+.tabela-loja-verde thead tr {
+    background-color: #388e3c;
+}
+.tabela-loja-verde thead th {
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1.5px solid #388e3c;
+    white-space: normal;
+    word-break: break-word;
+}
+.tabela-loja-verde tbody tr:nth-child(even) {
+    background-color: #c8e6c9;
+}
+.tabela-loja-verde tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+.tabela-loja-verde td {
+    color: #222;
+    padding: 8px 10px;
+    border: 1.5px solid #388e3c;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+}
+/* Estilo especial para a tabela da aba BAU */
+#tab-BAU .tabela-loja-preta {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#tab-BAU .tabela-loja-preta thead tr {
+    background-color: #222;
+}
+#tab-BAU .tabela-loja-preta thead th {
+    color: #fff;
+    padding: 4px 6px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #111;
+    white-space: normal;
+    word-break: break-word;
+}
+#tab-BAU .tabela-loja-preta tbody tr:nth-child(even) {
+    background-color: #ececec;
+}
+#tab-BAU .tabela-loja-preta tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+#tab-BAU .tabela-loja-preta td {
+    color: #222;
+    padding: 4px 6px;
+    border: 1px solid #111;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+}
+/* Estilo especial para a tabela da aba BAD */
+#tab-BAD .tabela-loja {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#tab-BAD thead tr {
+    background-color: #388e3c;
+}
+#tab-BAD thead th {
+    color: #fff;
+    padding: 4px 6px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #388e3c;
+    white-space: normal;
+    word-break: break-word;
+}
+#tab-BAD tbody tr:nth-child(even) {
+    background-color: #c8e6c9;
+}
+#tab-BAD tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+#tab-BAD td {
+    color: #222;
+    padding: 4px 6px;
+    border: 1px solid #388e3c;
+    text-align: left;
+    vertical-align: middle;
+}
+#tab-BAD th, #tab-BAD td {
+    white-space: normal;
+    word-break: break-word;
+}
+/* Cabeçalho fixo para BAD apenas em desktop */
+@media (min-width: 801px) {
+    #tab-BAD thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #388e3c; /* Garante fundo ao fixar */
+    }
+}
+/* style.css para aparência das tabelas e do site */
+body, html {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%) !important;
+    color: #fff;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.main-wrapper, #tab-contents, main {
+    background: transparent !important;
+}
+/* Ajuste para garantir largura total no mobile */
+.main-wrapper {
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Tabs responsivas */
+.tabs-container {
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 36px;
+    padding: 28px 0;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 900px) {
+    .tabs-container {
+        scroll-snap-type: x mandatory;
+    }
+.tabs-container > .tab-button.active {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #23234a;
+    color: #00d4ff;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    white-space: nowrap;
+}
+.tab-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,212,255,0.18);
+    background: #2a2a3e;
+    color: #fff;
+}
+.tab-button.active {
+    box-shadow: 0 0 24px #00d4ff;
+    background: #00d4ff;
+    color: #23234a;
+}
+
+@media (max-width: 800px) {
+    .tabs-container {
+        gap: 12px;
+        padding: 0 24px;
+        margin-bottom: 16px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        width: 100vw;
+        box-sizing: border-box;
+        scrollbar-width: thin;
+        scrollbar-color: #00d4ff #23234a;
+        scroll-padding-left: 24px;
+        scroll-padding-right: 24px;
+    }
+    .tabs-container > .tab-button {
+        margin: 0;
+        flex-shrink: 0;
+    }
+    .tabs-container::-webkit-scrollbar {
+        height: 6px;
+    }
+    .tabs-container::-webkit-scrollbar-thumb {
+        background: #00d4ff;
+        border-radius: 4px;
+    }
+    .tabs-container::-webkit-scrollbar-track {
+        background: #23234a;
+    }
+    .tab-button {
+        padding: 10px 18px;
+        font-size: 1em;
+        min-width: 120px;
+        max-width: none;
+        white-space: nowrap;
+    }
+    .main-wrapper {
+        max-width: 100vw;
+        width: 100vw;
+        box-sizing: border-box;
+        overflow-x: auto;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .tabs-container {
+        display: flex;
+        gap: 12px;
+        padding: 0 16px;
+        margin-bottom: 16px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        width: 100vw;
+        box-sizing: border-box;
+        scrollbar-width: thin;
+        scrollbar-color: #00d4ff #23234a;
+        scroll-padding-left: 16px;
+        scroll-padding-right: 16px;
+        scroll-behavior: smooth;
+        background: transparent;
+    }
+    .tabs-container > .tab-button {
+        flex-shrink: 0;
+        border-radius: 12px;
+        margin: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        background: #23234a;
+        color: #00d4ff;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    .tabs-container > .tab-button.active {
+        background: #00d4ff;
+        color: #23234a;
+        box-shadow: 0 0 24px #00d4ff;
+    }
+}
+
+.tabela-loja {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: #181828;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.tabela-loja th, .tabela-loja td {
+    border: 1px solid #fff;
+    padding: 0.6em 1em;
+    text-align: left;
+    font-size: 1em;
+}
+
+.tabela-loja th {
+    background: #23234a;
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+.tabela-loja tr:nth-child(even) {
+    background: #23234a;
+}
+
+.tabela-loja tr:nth-child(odd) {
+    background: #181828;
+}
+
+.tabela-loja td {
+    color: #fff;
+}
+
+.tabela-loja tr:hover {
+    background: #2a2a3e;
+}
+
+.chart-title {
+    color: #00d4ff;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.erro {
+    color: #ff4c4c;
+    font-weight: bold;
+    padding: 1em;
+}
+
+@media (min-width: 801px) {
+    body, html {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%) !important;
+        color: #fff;
+    }
+    .main-wrapper, #tab-contents, main {
+        background: transparent !important;
+}
+
+}
+
+/* ===== AJUSTE FINAL: COLUNA NOME (cresce com a tela) ===== */
+.tabela-nova td:first-child,
+.tabela-nova th:first-child {
+    min-width: 80px !important;
+    max-width: 100px !important;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .tabela-nova td:first-child,
+    .tabela-nova th:first-child {
+        min-width: 100px !important;
+        max-width: 120px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .tabela-nova td:first-child,
+    .tabela-nova th:first-child {
+        min-width: 120px !important;
+        max-width: 140px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tabela-nova td:first-child,
+    .tabela-nova th:first-child {
+        min-width: 120px !important;
+        max-width: 150px !important;
+    }
+}

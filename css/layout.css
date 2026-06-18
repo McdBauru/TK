@@ -1,0 +1,49 @@
+/* ===== LAYOUT PRINCIPAL ===== */
+.main-wrapper {
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#main-title {
+    font-size: 1.2em;
+    margin: 8px 0 16px;
+    text-align: center;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.layout-tabela-blocos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+    padding: 4px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.conteudos {
+    width: 100%;
+    padding: 0;
+}
+
+.chart-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tabela-container {
+    width: 100%;
+}

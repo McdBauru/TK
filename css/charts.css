@@ -1,0 +1,39 @@
+/* ===== SEÇÃO DE GRÁFICOS E TOTAIS ===== */
+.total-section {
+    display: flex;
+    flex-direction: column; /* Empilha no mobile */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Container do grafico de pizza e linhas */
+.pie-and-senac {
+    display: flex;
+    flex-direction: column; /* Empilha por padrão no mobile */
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Containers de Gráficos (Efeitos de Hover Preservados) */
+.pie-chart-container, .line-chart-container {
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    padding: 12px;
+    transition: border-color 0.3s ease;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.pie-chart-container:hover, .line-chart-container:hover {
+    box-shadow: none;
+    border-color: #333;
+}
+

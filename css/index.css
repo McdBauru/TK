@@ -1,0 +1,12 @@
+/* 
+  ===== MODULARIZED CSS STRUCTURE =====
+  Import all CSS modules in correct dependency order
+*/
+
+@import url('./reset-base.css');           /* Global reset and base styles */
+@import url('./layout.css');               /* Main wrapper and layout containers */
+@import url('./tabs.css');                 /* Tab navigation styles */
+@import url('./blocos.css');               /* Summary blocks and cards */
+@import url('./tabelas.css');              /* Table styles for all stores */
+@import url('./charts.css');               /* Plotly chart containers */
+@import url('./responsive-optimized.css'); /* Mobile-first responsive design */
